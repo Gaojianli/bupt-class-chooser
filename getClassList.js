@@ -1,9 +1,9 @@
 const fetch = require('node-fetch');
 const {
     cookie,
-    bixiu,
+    compulsory,
 } = require("./config");
-module.exports = async () => (await fetch(bixiu ? 'http://jwgl.bupt.edu.cn/jsxsd/xsxkkc/xsxkBxxk' : 'http://jwgl.bupt.edu.cn/jsxsd/xsxkkc/xsxkXxxk', {
+module.exports = async () => (await fetch(compulsory ? 'http://jwgl.bupt.edu.cn/jsxsd/xsxkkc/xsxkBxxk' : 'http://jwgl.bupt.edu.cn/jsxsd/xsxkkc/xsxkXxxk', {
     "headers": {
         "accept": "*/*",
         "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6",
