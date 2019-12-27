@@ -1,4 +1,5 @@
 # bupt-class-chooser
+[老教务系统](https://github.com/linyinfeng/bupt-class-chooser)
 ## Usage
 ### Install Dependencies
 ```bash
