@@ -1,0 +1,17 @@
+{
+  "name": "xuanke",
+  "version": "1.0.0",
+  "description": "BUPT qxjb",
+  "main": "spider.js",
+  "scripts": {
+    "start": "node spider.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gaojianli",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jsdom": "^15.2.1",
+    "node-fetch": "^2.6.0"
+  }
+}
