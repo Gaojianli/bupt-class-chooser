@@ -11,11 +11,24 @@ async function main() {
     }
     while (xkLink == undefined);
     xkLink = config.base + xkLink.replace("xklc_view", "xsxk_index");
+    await fetch(xkLink, {
+        "headers": {
+            "accept": "*/*",
+            "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6",
+            "x-requested-with": "XMLHttpRequest",
+            "cookie": config.cookie
+        },
+        "referrer": "http://jwgl.bupt.edu.cn/jsxsd/xsxkkc/comeInBxxk",
+        "referrerPolicy": "no-referrer-when-downgrade",
+        "body": null,
+        "method": "GET",
+        "mode": "cors"
+    })
     console.log("尝试获取课程列表...");
     const list = await getClassList();
-    console.log("课程列表获取成功");
     let classList = [];
     if (list) {
+        console.log("课程列表获取成功");
         classList = list.aaData.map(item => ({
             name: item.fzmc,
             url: `http://jwgl.bupt.edu.cn/jsxsd/xsxkkc/bxxkOper?kcid=${item.jx02id}&cfbs=null&jx0404id=${item.jx0404id}&xkzy=&trjf=`
