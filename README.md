@@ -7,6 +7,7 @@ npm i
 ```
 ### Config
 1. 填写`config.json`
+
     |参数名称|类型|描述|
     | ------ | ------ | ------ |
     |cookie|`string`|你的cookie|
