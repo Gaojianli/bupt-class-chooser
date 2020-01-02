@@ -22,6 +22,8 @@ module.exports = function getXKList(cookie) {
                 document
             } = (new JSDOM(data)).window;
             global.document = document;
+            if (data.includes('请先登录系统'))
+                throw Error('请重新登录');
             const window = document.defaultView;
             const $ = require('jquery')(window);
             return $('a:contains("进入选课")').attr("href");

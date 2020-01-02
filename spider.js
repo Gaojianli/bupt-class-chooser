@@ -8,6 +8,8 @@ async function main() {
     let xkLink;
     do {
         xkLink = await getXKList(config.cookie);
+        if (!xkLink)
+            console.log('选课尚未开始！');
     }
     while (xkLink == undefined);
     xkLink = config.base + xkLink.replace("xklc_view", "xsxk_index");
@@ -72,9 +74,8 @@ async function main() {
                 consoleCount = 0;
             }
         };
-    }
-    else{
-        console.log('课程列表为空，选课可能还未开始');
+    } else {
+        console.log('课程列表为空，请检查课程类型是否有误');
         process.exit(0);
     }
 };
