@@ -33,7 +33,7 @@ async function main() {
             name: config.compulsory ? item.fzmc : item.kcmc,
             url: `http://jwgl.bupt.edu.cn/jsxsd/xsxkkc/bxxkOper?kcid=${item.jx02id}&cfbs=null&jx0404id=${item.jx0404id}&xkzy=&trjf=`
         }))
-        if (!config.jibuzeshi) {
+        if (!config.hunger) {
             classList = classList.filter(item => {
                 for (const expect of expected) {
                     if (item.name.includes(expect)) {
@@ -63,7 +63,8 @@ async function main() {
                 } else {
                     console.log(`抢课成功:${classToGet.name}`)
                     successFlag = true
-                    setTimeout(() => global.process.exit(0), 1000);
+                    if(!config.hunger)
+                        setTimeout(() => global.process.exit(0), 1000);
                 }
             }))
             if (consoleCount > 200) {
