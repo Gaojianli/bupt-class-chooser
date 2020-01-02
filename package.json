@@ -4,14 +4,25 @@
   "description": "BUPT qxjb",
   "main": "spider.js",
   "scripts": {
-    "start": "node spider.js",
+    "start": "tsc && node build/spider.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gaojianli",
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "@types/jsdom": "^12.2.4",
+    "@types/node-fetch": "^2.5.4",
     "jquery": "^3.4.1",
     "jsdom": "^15.2.1",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
   }
 }
